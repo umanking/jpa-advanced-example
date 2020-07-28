@@ -23,7 +23,7 @@ public class InitDB {
     @PostConstruct
     public void init() {
         initService.doService1();
-//        initService.doService2();
+        initService.doService2();
     }
 
     @Component
@@ -54,11 +54,28 @@ public class InitDB {
             Order order = Order.createOrder(member, orderItem, orderItem1);
             em.persist(order);
 
-
         }
 
         public void doService2() {
+            Member member = new Member();
+            member.setName("Ted");
+            em.persist(member);
 
+            Book book = new Book();
+            book.setName("Spring in action");
+            book.setPrice(15000);
+            em.persist(book);
+
+            Book book1 = new Book();
+            book1.setName("Toby Spring");
+            book1.setPrice(15000);
+            em.persist(book1);
+
+            OrderItem orderItem = OrderItem.createOrderItem(book, 30000, 2);
+            OrderItem orderItem1 = OrderItem.createOrderItem(book1, 30000, 2);
+
+            Order order = Order.createOrder(member, orderItem, orderItem1);
+            em.persist(order);
         }
 
 
