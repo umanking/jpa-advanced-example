@@ -21,6 +21,18 @@ public class MemberApi {
         return new CreateMemberResponse(memberRepository.save(member).getId());
     }
 
+    @PostMapping("/api/v2/member")
+    public CreateMemberResponse createMemberV2(@RequestBody @Validated CreateMemberRequest request) {
+        Member member = new Member();
+        member.setName(request.getName());
+        return new CreateMemberResponse(memberRepository.save(member).getId());
+    }
+
+    @Data
+    static class CreateMemberRequest {
+        String name;
+    }
+
     @Data
     static class CreateMemberResponse {
         private Long id;
