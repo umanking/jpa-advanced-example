@@ -5,7 +5,6 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.validation.constraints.NotEmpty;
 
 /**
  * @since 2020-07-28
@@ -19,7 +18,6 @@ public class Member {
     private Long id;
 
     private String name;
-
-    @NotEmpty
+    
     private String email;
 }
