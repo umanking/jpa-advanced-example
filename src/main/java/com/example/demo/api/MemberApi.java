@@ -1,5 +1,8 @@
-package com.example.demo;
+package com.example.demo.api;
 
+import com.example.demo.domain.Member;
+import com.example.demo.repository.MemberRepository;
+import com.example.demo.service.MemberService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
