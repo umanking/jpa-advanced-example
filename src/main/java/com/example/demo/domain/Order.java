@@ -26,7 +26,7 @@ public class Order {
     @JoinColumn
     private Member member;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<OrderItem> orderItems = new ArrayList<>();
 
     private LocalDateTime orderDate;

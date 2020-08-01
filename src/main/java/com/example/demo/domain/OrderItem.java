@@ -1,5 +1,6 @@
 package com.example.demo.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,10 +21,12 @@ public class OrderItem {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
+    @JsonIgnore
     private Order order;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
+    @JsonIgnore
     private Book book;
 
     private int orderPirce;

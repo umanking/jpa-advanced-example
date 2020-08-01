@@ -14,6 +14,8 @@ import java.util.stream.Collectors;
 
 /**
  * @since 2020-07-28
+ * <p>
+ * XtoOne 예제
  */
 @RestController
 @RequiredArgsConstructor
