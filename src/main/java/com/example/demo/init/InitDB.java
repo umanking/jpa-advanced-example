@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.init;
 
 import com.example.demo.domain.Book;
 import com.example.demo.domain.Member;
